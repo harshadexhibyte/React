@@ -1,7 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-
 function App() {
   return (
     <>
@@ -21,8 +20,6 @@ function App() {
           </a>
         </header>
       </div>
-      <div>header</div>
-      <div>footer</div>
     </>
   );
 }
