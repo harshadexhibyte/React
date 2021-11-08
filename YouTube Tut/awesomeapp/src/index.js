@@ -5,6 +5,7 @@ import App from "./App";
 import Heading from "./components/Heading";
 import reportWebVitals from "./reportWebVitals";
 import { add, sub, div, mult } from "./components/Calc";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // ReactDOM.render(<h1>Hello Word</h1>, document.getElementById("root"));
 
@@ -21,9 +22,31 @@ if (currentDate >= 1 && currentDate < 12) {
 } else {
   greetings = "Good Night";
 }
+
+function card() {
+  return (
+    <>
+      <div className="card-deck">
+        <div className="card col-md-3">
+          <img
+            className="card-img-top"
+            src="https://picsum.photos/seed/picsum/20/30"
+            alt="Card image cap"
+          />
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">Netfilx Original Series</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 ReactDOM.render(
   <React.Fragment>
-    <Heading></Heading>
+    <h1 className="text-center">TOP 5 Series</h1>
+      
+    {/*<Heading></Heading>
     <h1>Hello {greetings}</h1>
     <ul>
       <li>Sum of Two Number is : {add(3, 5)} </li>
@@ -32,13 +55,12 @@ ReactDOM.render(
       <li>Mult of Two Number is : {mult(3, 5)}</li>
     </ul>
 
-    {/* <h1 className="heading">My name is {fname}</h1>
+     <h1 className="heading">My name is {fname}</h1>
     <div className="images">
       <img src={img1} />
       <img src={img1} />
       <img src={img1} />
     </div> */}
-
     {/* <h1>My Name is {fname} </h1>
     <h1>2 + 3 SUM IS = {3 + 3} </h1>
     <h1>2 + 3 SUM IS = {Math.random()} </h1>
@@ -53,7 +75,11 @@ ReactDOM.render(
     <img src={img1} />
     <img src={img1} />
     <img src={img1} /> 
-     <App></App> */}
+     <App></App> 
+    <input type="text" name="fullName" value="Harshad Satasiya"></input>*/}
+    <card />
+    <card />
+    <card />
   </React.Fragment>,
   document.getElementById("root")
 );
